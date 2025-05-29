@@ -11,6 +11,18 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </nav>
-    <h1>Hello World mola</h1>
+    <h1>Hello World</h1>
+
+    <% const myname = "Min Ko Ko Linn" %>
+    
+    <h2>My Name is <%= myname %></h2>
+    <hr>
+    <% if (blogs.length) { %>
+      <% blogs.forEach(blog => { %>
+        <h2><%= blog.title %></h2>
+        <p><%= blog.intro %></p>
+        <hr>
+      <% }) %>
+    <% } %>
   </body>
 </html>
