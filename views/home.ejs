@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+  <%- include("./components/head.ejs") %>
   <body>
-    
     <%- include("./components/navbar.ejs") %>
 
-    <h1>Hello World</h1>
-    <% const myname = "Min Ko Ko Linn" %>
-    
-    <h2>My Name is <%= myname %></h2>
-    <hr>
-    <% if (blogs.length) { %>
-      <% blogs.forEach(blog => { %>
+    <div class="container">
+      <% if (blogs.length) { %> <% blogs.forEach(blog => { %>
+      <div class="blog-card">
         <h2><%= blog.title %></h2>
         <p><%= blog.intro %></p>
-        <hr>
-      <% }) %>
-    <% } %>
+      </div>
+      <% }) %> <% } %>
+    </div>
   </body>
 </html>
