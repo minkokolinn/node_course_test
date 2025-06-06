@@ -1,0 +1,22 @@
+// import mongoose
+const mongoose = require("mongoose")
+
+// defining blog schema
+const BlogSchema = mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    intro:{
+        type:String,
+        required:true
+    },
+    body:{
+        type:String,
+        required:true
+    }
+})
+
+const Blog = mongoose.model("Blog",BlogSchema)
+
+module.exports = Blog
